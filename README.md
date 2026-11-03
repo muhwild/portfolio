@@ -33,7 +33,11 @@ npm run dev
 npm run generate
 ```
 
-Requires a current Node LTS (**22 or 24**; an `.nvmrc` is included, so `nvm use` works). Nuxt is pinned to 2.18.x and webpack to 4.x, which is what makes Nuxt 2 run on modern Node without any `--openssl-legacy-provider` flags.
+Requires Node **24** (an `.nvmrc` is included, so `nvm use` works; Node 22 and 26 also build). Nuxt is pinned to 2.18.x and webpack to 4.x, which is what lets Nuxt 2 run on modern Node without `--openssl-legacy-provider`.
+
+### Deploying on Vercel
+
+Vercel ignores `.nvmrc`. It reads the Node version from `engines.node` in `package.json` (set to `24.x`), which overrides the dropdown in *Project Settings → Build and Deployment → Node.js Version*. If you see an "invalid or discontinued Node.js Version" error, update that dropdown too.
 
 ## License
 
