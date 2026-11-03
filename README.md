@@ -33,11 +33,7 @@ npm run dev
 npm run generate
 ```
 
-Nuxt 2 uses webpack 4, which needs a legacy OpenSSL flag on Node 17+:
-
-```bash
-NODE_OPTIONS=--openssl-legacy-provider npm run dev
-```
+Requires a current Node LTS (**22 or 24**; an `.nvmrc` is included, so `nvm use` works). Nuxt is pinned to 2.18.x and webpack to 4.x, which is what makes Nuxt 2 run on modern Node without any `--openssl-legacy-provider` flags.
 
 ## License
 
