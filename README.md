@@ -1,6 +1,6 @@
 # Muh Wildan — Portfolio
 
-Personal portfolio of **Muh Wildan Alifi**, a front-end developer. Projects are pulled from [github.com/muhwild](https://github.com/muhwild).
+Personal portfolio of **Muh Wildan Alifi Alfian**, a fullstack developer. Projects are pulled from [github.com/muhwild](https://github.com/muhwild).
 
 ## Stack
 
@@ -15,7 +15,8 @@ Personal portfolio of **Muh Wildan Alifi**, a front-end developer. Projects are 
 | --- | --- |
 | Project cards, descriptions, tech badges, links | `data/projects.js` |
 | Home intro and social links | `pages/index.vue` |
-| Bio and tech stack | `pages/About.vue` |
+| Experience, education, skills (from the CV) | `data/profile.js` |
+| About page layout | `pages/About.vue` |
 | Project card layout | `components/ProjectCard.vue` |
 
 To add a project, add an object to `projects` in `data/projects.js`. Give it a `cover` (a screenshot in `assets/`) or set `cover: null` to get a generated title card using its `accent` colour.

@@ -75,7 +75,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "Projects by Muh Wildan: a Palworld hosting storefront, an SSL certificate dashboard, a retail ordering app, a point-of-sale backoffice, a social platform and more, with source on GitHub."
+          "Projects by Muh Wildan: a Palworld hosting storefront, an SSL certificate dashboard, a retail ordering app, a point-of-sale backoffice, a social platform and a Laravel job portal, with source on GitHub."
       },
       {
         hid: "og:title",
@@ -85,7 +85,7 @@ export default {
       {
         property: "og:description",
         content:
-          "Projects by Muh Wildan: a Palworld hosting storefront, an SSL certificate dashboard, a retail ordering app, a point-of-sale backoffice, a social platform and more, with source on GitHub."
+          "Projects by Muh Wildan: a Palworld hosting storefront, an SSL certificate dashboard, a retail ordering app, a point-of-sale backoffice, a social platform and a Laravel job portal, with source on GitHub."
       },
       {
         hid: "og:image",

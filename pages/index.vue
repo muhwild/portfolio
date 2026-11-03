@@ -13,15 +13,14 @@
     <b-col md="8">
       <h2 class="intro animate__animated animate__fadeInUp animate__fast">
         Hi 👋,
-        <br />I<span>'m Muh Wildan&nbsp;Alifi</span>.
+        <br />I<span>'m Muh Wildan&nbsp;Alifi&nbsp;Alfian</span>.
       </h2>
 
       <div class="col-md-10 info">
-        A <b>front-end developer</b> who loves turning messy workflows into
-        clean interfaces.<br />
-        I build <b>dashboards</b>, <b>storefronts</b> and
-        <b>social platforms</b> with Vue, Nuxt and Next.js, from point-of-sale
-        backoffices to game-server hosting.
+        A <b>fullstack developer</b> based in Batam, Indonesia, turning
+        business requirements into reliable web apps.<br />
+        I work across <b>React</b>, <b>Vue</b>, <b>Next.js</b> and
+        <b>Laravel</b>, from point-of-sale backoffices to game-server hosting.
         <br />
         <b-button
           class="action-btn animate__animated animate__wobble animate__delay-4s animate__fast"
@@ -70,7 +69,7 @@ export default {
       socialLinks: {
         github: "https://github.com/muhwild",
         linkedin: "https://www.linkedin.com/in/muhwil/",
-        mail: "mailto:elwin235h@gmail.com",
+        mail: "mailto:muhwil233@gmail.com",
         youtube: ""
       }
     };
@@ -83,7 +82,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "Muh Wildan is a front-end developer who builds dashboards, storefronts and social platforms with Vue, Nuxt, Next.js and TypeScript, from point-of-sale backoffices to game-server hosting."
+          "Muh Wildan Alifi Alfian is a fullstack developer in Batam, Indonesia, building web applications with React.js, Vue.js, Next.js, TypeScript, PHP and Laravel."
       },
       {
         hid: "og:title",
@@ -93,7 +92,7 @@ export default {
       {
         property: "og:description",
         content:
-          "Muh Wildan is a front-end developer who builds dashboards, storefronts and social platforms with Vue, Nuxt, Next.js and TypeScript, from point-of-sale backoffices to game-server hosting."
+          "Muh Wildan Alifi Alfian is a fullstack developer in Batam, Indonesia, building web applications with React.js, Vue.js, Next.js, TypeScript, PHP and Laravel."
       },
       {
         hid: "og:image",

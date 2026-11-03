@@ -53,9 +53,9 @@ export const projects = [
   },
   {
     title: "POS Backoffice",
-    tag: "Point-of-sale management UI",
+    tag: "Point-of-sale management UI, built at Olsera",
     description:
-      "The command centre behind a point-of-sale business. This is my front-end work on Olsera V2's backoffice, where merchants run catalogue, marketing, sales, purchasing and reports from one sidebar. It's a lot of product packed into one interface. The repo is even named after the ticket it was built around (#935).",
+      "The command centre behind a point-of-sale business. This is my front-end work on Olsera V2's backoffice from my time as a Frontend Developer at Olsera, where merchants run catalogue, marketing, sales, purchasing and reports from one sidebar. It's a lot of product packed into one interface. The repo is even named after the ticket it was built around (#935).",
     highlights: [
       "Sidebar navigation across catalogue, sales, purchasing and accounting",
       "Outlet switching, notifications and a What's New feed",
@@ -100,7 +100,7 @@ export const projects = [
     title: "Job Portal",
     tag: "Client project",
     description:
-      "A job portal built for a client, and a chance to work beyond pure front-end. Laravel handles routing and data while Blade templates render the pages on the server.",
+      "A job portal built for a client, full stack from database to page. Laravel handles routing and data while Blade templates render the pages on the server.",
     highlights: [],
     stack: ["Laravel", "Blade", "PHP"],
     cover: null,
