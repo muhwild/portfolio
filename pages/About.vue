@@ -9,26 +9,41 @@
             I am Muh Wildan Alifi, a <b>Front-end developer</b>
           </p>
           <p>
-            I have <b> 4+ years experience</b> in
-            crafting beautiful web and mobile interfaces. Plus I am an agile
-            learner, I learn new cool stuffs everyday.
+            I have <b>{{ yearsExperience }}+ years of experience</b> crafting
+            web and mobile interfaces. My
+            <b-link to="/projects">recent work</b-link> ranges from
+            point-of-sale backoffices and retail ordering apps to SSL admin
+            dashboards, a Palworld hosting storefront and a social platform
+            built for desktop, mobile and admin.
+          </p>
+          <p>
+            I'm an agile learner: Vue and Nuxt are home turf, and I keep
+            stretching into Next.js, TypeScript, Tailwind CSS and Laravel. See
+            the code on
+            <b-link
+              href="https://github.com/muhwild"
+              target="_blank"
+              rel="noopener"
+              >GitHub</b-link
+            >.
           </p>
           <h4 class="mt-5">Tech Stacks</h4>
           <p>Below are some of the technologies I use daily:</p>
           <div class="row animate__animated animate__fadeInUp">
             <div class="col">
               <ul style="list-style-type: circle;">
-                <li>HTML & CSS</li>
-                <li>Node.js</li>
-                <li>Bootstrap</li>
+                <li>HTML & CSS / SCSS</li>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>Bootstrap & Tailwind CSS</li>
               </ul>
             </div>
             <div class="col">
               <ul style="list-style-type: circle;">
-                <li>JavaScript</li>
-                <li>TypeScript</li>
-                <li>Vue.js</li>
-                <li>React.js</li>
+                <li>Vue.js & Nuxt</li>
+                <li>React & Next.js</li>
+                <li>Node.js</li>
+                <li>Laravel (Blade)</li>
               </ul>
             </div>
           </div>
@@ -49,40 +64,13 @@ export default {
   data() {
     return {
       startYear: 2021,
-      currYear: new Date().getFullYear(),
-      stacks: [
-        {
-          language: "HTML",
-          experience: "3+ Years",
-          variant: "secondary",
-          breif: "lorem..."
-        },
-        {
-          language: "CSS",
-          experience: "3+ Years",
-          variant: "primary",
-          breif: "lorem..."
-        },
-        {
-          language: "Javascript",
-          experience: "2+ Years",
-          variant: "warning",
-          breif: "lorem..."
-        },
-        {
-          language: "VUE.JS",
-          experience: "2+ Years",
-          variant: "success",
-          breif: "lorem..."
-        },
-        {
-          language: "Node.js",
-          experience: "2+ Years",
-          variant: "dark",
-          breif: "lorem..."
-        }
-      ]
+      currYear: new Date().getFullYear()
     };
+  },
+  computed: {
+    yearsExperience() {
+      return this.currYear - this.startYear;
+    }
   },
   head: {
     title: "About 🕵️‍♂️ - Muh Wildan",
@@ -91,7 +79,7 @@ export default {
         hid: "description",
         name: "description",
         // currYear - startYear
-        content: `Hey there 👋 My name is Muh Wildan, i am a front-end developer  currently studying Computer Science at OAUSTECH(Nigeria). i have many years of experience in crafting beautiful web and mobile interfaces. Plus i am an agile learner, i learn new cool stuffs everyday.`
+        content: `Hey there 👋 I'm Muh Wildan, a front-end developer. I build dashboards, storefronts and social platforms with Vue, Nuxt, Next.js and TypeScript, and I learn something new every day.`
       }
     ]
   }

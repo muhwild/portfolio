@@ -1,87 +1,72 @@
 <template>
-  <div class="about page  animate__animated animate__fadeIn">
+  <div class="about page animate__animated animate__fadeIn">
     <h2>Recent Projects</h2>
+    <p class="intro-line">
+      Selected work from my
+      <b-link href="https://github.com/muhwild" target="_blank" rel="noopener"
+        >GitHub</b-link
+      >: dashboards, storefronts, a social platform and a few things in between.
+    </p>
+
     <div class="container">
-      <div class="row" v-for="(project, index) in projects" :key="index">
-        <div class="col-md-5">
-          <img
-            :src="project.image_cover"
-            :alt="project.title"
-            class="project-cover"
-          />
-        </div>
-        <div class="col-md-5">
-          <h2 class="mt-3" style="text-align: left;">
-            {{ project.title }}
-            <hr class="dope" />
-          </h2>
-          <b-card class="mt-3 mb-3 text-left text-dark">
-            <p>{{ project.description }}</p>
-            <hr />
-            <b-link :href="project.github_url"
-              >View source code <GithubIcon style="color: #000;"
-            /></b-link>
-          </b-card>
+      <project-card
+        v-for="project in projects"
+        :key="project.title"
+        :project="project"
+      />
+
+      <div class="archive">
+        <h3>From the archive</h3>
+        <p class="archive-note">Smaller and older repos that are still around.</p>
+        <div class="row archive-row">
+          <div
+            class="col-md-4 mb-3"
+            v-for="item in archive"
+            :key="item.title"
+          >
+            <b-card class="h-100 text-left text-dark archive-card">
+              <h5 class="mb-0">{{ item.title }}</h5>
+              <p class="archive-tag">{{ item.tag }}</p>
+              <p class="archive-desc">{{ item.description }}</p>
+              <b-badge
+                v-for="tech in item.stack"
+                :key="tech"
+                variant="light"
+                class="stack-badge mr-1"
+                >{{ tech }}</b-badge
+              >
+              <hr />
+              <b-link :href="item.url" target="_blank" rel="noopener">
+                Source code <GithubIcon style="color: #000;" />
+              </b-link>
+            </b-card>
+          </div>
         </div>
       </div>
+
+      <p class="more-link">
+        More on
+        <b-link href="https://github.com/muhwild?tab=repositories" target="_blank" rel="noopener"
+          >github.com/muhwild</b-link
+        >
+      </p>
     </div>
   </div>
 </template>
+
 <script>
-import LinkIcon from "vue-ionicons/dist/md-link.vue";
 import GithubIcon from "vue-ionicons/dist/logo-github.vue";
+import { projects, archive } from "@/data/projects";
 
 export default {
   components: {
-    GithubIcon,
-    LinkIcon
+    GithubIcon
   },
   data() {
     return {
-      projects: [
-        {
-          title: "Palhost",
-          tag: "Palworld Client Server",
-          description:
-            "Web for Palworld Client Server hosting and configurations.",
-          image_cover: require("@/assets/palhost_1.png"),
-          github_url: "https://github.com/upeel/palhost/",
-        },
-        {
-          title: "SSL Certificate",
-          tag: "Manage domains",
-          description:
-            "A Web for managing DNS, domains, and SSL Certificate",
-          image_cover: require("@/assets/xxl.png"),
-          github_url: "https://github.com/upeel/ssl-cert/",
-        },
-        {
-          title: "Retail Order",
-          tag: "Online ordering web",
-          description:
-            "Order your favorite stuff in your favorite outlets",
-          image_cover: require("@/assets/antarinbarang.png"),
-          github_url: "https://github.com/upeel/retail",
-        },
-        {
-          title: "Backoffice",
-          tag: "Backoffice for Point of Sales",
-          description:
-            "It's easier to manage your Business in beautiful backoffice UI",
-          image_cover: require("@/assets/olsera.png"),
-          github_url: "https://github.com/upeel/frontend-olseraV2-issue-935",
-        }
-      ],
+      projects,
+      archive
     };
-  },
-  methods: {
-    isEven(n) {
-      if (n % 2 == 0) {
-        return true;
-      } else {
-        return false;
-      }
-    }
   },
   head: {
     title: "Recent Projects 💻 - Muh Wildan",
@@ -90,7 +75,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "View all the recents open-sourced projects built with ♥ by Muh Wildan, open-sourced means this project source code are publicly available for everyone to use or modify."
+          "Projects by Muh Wildan: a Palworld hosting storefront, an SSL certificate dashboard, a retail ordering app, a point-of-sale backoffice, a social platform and more, with source on GitHub."
       },
       {
         hid: "og:title",
@@ -100,7 +85,7 @@ export default {
       {
         property: "og:description",
         content:
-          "View all the recents open-sourced projects built with ♥ by Muh Wildan, open-sourced means this project source code are publicly available for everyone to use or modify."
+          "Projects by Muh Wildan: a Palworld hosting storefront, an SSL certificate dashboard, a retail ordering app, a point-of-sale backoffice, a social platform and more, with source on GitHub."
       },
       {
         hid: "og:image",
@@ -111,21 +96,37 @@ export default {
   }
 };
 </script>
+
 <style scoped>
-.row {
-  margin-top: 70px;
+.intro-line {
+  max-width: 560px;
+  margin: 12px auto 0;
+  line-height: 1.7;
 }
-.project-cover {
-  width: inherit;
-  border-radius: 3px;
-}
-hr.dope {
-  border: 0;
-  width: 90px;
-  border-top: 2px solid #dc3545;
+.archive {
+  margin-top: 90px;
   text-align: left;
-  margin: initial;
-  margin-top: 7px;
-  margin-left: 5px;
+}
+.archive-note {
+  color: #6c757d;
+}
+.archive-row {
+  margin-top: 16px;
+}
+.archive-tag {
+  margin: 2px 0 10px;
+  color: #6c757d;
+  font-size: 14px;
+}
+.archive-desc {
+  font-size: 15px;
+  line-height: 1.6;
+}
+.stack-badge {
+  border: 1px solid #dee2e6;
+  font-weight: 600;
+}
+.more-link {
+  margin: 40px 0 60px;
 }
 </style>

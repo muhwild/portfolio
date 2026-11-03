@@ -14,14 +14,15 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: process.env.npm_package_name || "",
+    title: "Muh Wildan - Front-end Developer",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
         hid: "description",
         name: "description",
-        content: process.env.npm_package_description || ""
+        content:
+          "Portfolio of Muh Wildan Alifi, a front-end developer building dashboards, storefronts and social platforms with Vue, Nuxt, Next.js and TypeScript."
       }
     ],
     link: [

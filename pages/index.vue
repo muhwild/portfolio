@@ -17,10 +17,11 @@
       </h2>
 
       <div class="col-md-10 info">
-        A <b>front-end developer</b>passionate
-        about solving problems with tech.<br />
-        I am skilled with building <b>websites</b> and
-        <b>mobile applications</b>
+        A <b>front-end developer</b> who loves turning messy workflows into
+        clean interfaces.<br />
+        I build <b>dashboards</b>, <b>storefronts</b> and
+        <b>social platforms</b> with Vue, Nuxt and Next.js, from point-of-sale
+        backoffices to game-server hosting.
         <br />
         <b-button
           class="action-btn animate__animated animate__wobble animate__delay-4s animate__fast"
@@ -67,7 +68,7 @@ export default {
       avatar: require("@/assets/avatar-1.webp"),
       // ADD YOUR SOCIAL LINKS HERE 👇
       socialLinks: {
-        github: "http://github.com/upeel",
+        github: "https://github.com/muhwild",
         linkedin: "https://www.linkedin.com/in/muhwil/",
         mail: "mailto:elwin235h@gmail.com",
         youtube: ""
@@ -82,7 +83,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "Muh Wildan is an awesome front-end developer, passionate about building solutions that works across multiple platforms with high accessibility approach. Wildan has vast knowledge in web development with over 3+ years experience in building actual products"
+          "Muh Wildan is a front-end developer who builds dashboards, storefronts and social platforms with Vue, Nuxt, Next.js and TypeScript, from point-of-sale backoffices to game-server hosting."
       },
       {
         hid: "og:title",
@@ -92,7 +93,7 @@ export default {
       {
         property: "og:description",
         content:
-          "Muh Wildan is an awesome front-end developer, passionate about building solutions that works across multiple platforms with high accessibility approach. Wildan has vast knowledge in web development with over 3+ years experience in building actual products"
+          "Muh Wildan is a front-end developer who builds dashboards, storefronts and social platforms with Vue, Nuxt, Next.js and TypeScript, from point-of-sale backoffices to game-server hosting."
       },
       {
         hid: "og:image",
